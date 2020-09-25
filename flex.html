@@ -3,7 +3,65 @@
 	<head>
 		<meta charset="utf-8">
 		<title>flex布局</title>
+    <style type="text/css">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .header,.footer{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        background-color: gray;
+      }
+      .content{
+        display: flex;
+        display: -webkit-flex;
+        background-color: orangered;
+      }
+      .center{
+        /* flex-grow: <number>;  default 0 */
+        /* flex-shrink: <number>;  default 1 */
+        /* flex-basis: <length> | auto;  default auto */
+        /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+        /* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; = flex: 1;*/
+        flex: 1;
+        background-color: #2E8B57;
+      }
+      .left{
+        flex: 0 1 200px;
+        order: -1;
+        background-color: #B8860B;
+      }
+      .right{
+        flex: 0 1 300px;
+        background-color: #008B8B;
+      }
+    </style>
 	</head>
 	<body>
+    <div class="header">
+      <h1>header</h1>
+    </div>
+    <div class="content">
+      <div class="center">
+        <h2>This is the main content.</h2>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.
+        
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.
+      </div>
+      <div class="left">
+        <h2>This is the left sidebar.</h2>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.
+      </div>
+      <div class="right">
+        <h2>This is the right sidebar.</h2>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.
+      </div>
+    </div>
+    <div class="footer">
+      <h1>footer</h1>
+    </div>
 	</body>
 </html>
